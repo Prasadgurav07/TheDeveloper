@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
 
-  <!--
-    - favicon
-  -->
-  <!-- <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon"> -->
 
-  <!--
-    - custom css link
-  -->
-  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
 
   <!--
     - #MAIN
@@ -42,17 +17,25 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="assets/image/profile.jpeg" style="border-radius: 20%;" alt="My Avatar" width="80">
+          <img src="./assets/image/profile.jpeg" style="border-radius: 20%;" alt="My Avatar" width="80">
 
 
         </figure>
+        
+       
+        <div   class="info-content">
+          @if (employee) {
 
-        <div class="info-content">
-          <h1 class="name" title="Prasad Gurav">Prasad Gurav</h1>
+    <h1 class="name">{{ employee.fullName }}</h1>
+  }@else{
+{{employee}}
+  }
+          <h1 class="name" title="Prasad Gurav">{{ employee.fullName }}</h1>
 
           <p class="title">Software Developer</p><br>
           <a class="title" style="background-color: rgb(77, 76, 76);" href="assets/Certificate/Prasad_Resume (1).pdf" download>Download CV</a>
         </div>
+     
         
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -856,9 +839,9 @@
 
         <section class="mapbox" data-mapbox>
           <figure>
-            <iframe
-           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.6405382304615!2d73.61007352372869!3d17.12136900732233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1e5ad1bae0407%3A0x8c0e2e31c7122b99!2sShri%20Kondeshwar%20Temple!5e1!3m2!1sen!2sin!4v1764072018547!5m2!1sen!2sin"
-              width="400" height="300" loading="lazy"></iframe>
+            <iframe src="/contact.aspx" width="400" height="300" loading="lazy"></iframe>
+"
+        
           </figure>
         </section>
 
@@ -896,17 +879,7 @@
 
 
 
-  <!--
-    - custom js link
-  -->
-  <script src="assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-</body>
 
-</html>
+
